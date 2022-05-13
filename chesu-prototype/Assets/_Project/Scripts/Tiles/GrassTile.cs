@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Class <c>GrassTile</c> is a tile that can be occupied by a unit. Changes color to be a checker board pattern.
+/// </summary>
 public class GrassTile : Tile
 {
     [SerializeField] private Color _baseColor, _offsetColor;

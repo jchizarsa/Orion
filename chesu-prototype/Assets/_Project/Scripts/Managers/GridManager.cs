@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+/// <summary>
+/// Class <c>GridManager</c> controls the grid generation and determining tile locations.
+/// </summary>
 public class GridManager : MonoBehaviour
 {
     public static GridManager Instance;
@@ -41,10 +43,20 @@ public class GridManager : MonoBehaviour
         GameManager.Instance.ChangeState(GameState.SpawnHeroes);
     }
 
+    /**
+     * @desc Gets the player spawning tile at a "random" location (Update required).
+     * @param N/A
+     * @return The tile at the specified location.
+     */
     public Tile GetHeroSpawnTile(){
         return _tiles.Where(t=>t.Key.x < _width/2 && t.Value.Walkable).OrderBy(t=>Random.value).First().Value;
     }
 
+    /**
+     * @desc Gets the enemy spawning tile at a "random" location (Update required).
+     * @param N/A
+     * @return The tile at the specified location.
+     */
     public Tile GetEnemySpawnTile(){
         return _tiles.Where(t=>t.Key.x > _width/2 && t.Value.Walkable).OrderBy(t=>Random.value).First().Value;
     }
@@ -58,8 +70,7 @@ public class GridManager : MonoBehaviour
     public Tile GetTileAtPosition(Vector2 pos){
         if(_tiles.TryGetValue(pos, out var tile)){
             return tile;
-        }
-
-        return null;
+        }else
+            return null;
     }
 }

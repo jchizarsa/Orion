@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Class <c>Enemy1</c> derives from BaseEnemy. Implements behavior specifically for Enemy1.
+/// </summary>
 public class Enemy1 : BaseEnemy
 {
     // Start is called before the first frame update

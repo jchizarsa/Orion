@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Class <c>GameManager</c> controls the game states.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
