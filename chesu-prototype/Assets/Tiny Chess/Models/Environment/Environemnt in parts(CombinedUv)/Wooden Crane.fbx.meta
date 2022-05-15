@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: f31d1fde748d9934fac29bd907484984
+timeCreated: 1517055769
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Crane_Element_1
+    100002: Crane_Element_10
+    100004: Crane_Element_11
+    100006: Crane_Element_12
+    100008: Crane_Element_13
+    100010: Crane_Element_14
+    100012: Crane_Element_16
+    100014: Crane_Element_17
+    100016: Crane_Element_18
+    100018: Crane_Element_19
+    100020: Crane_Element_20
+    100022: Crane_Element_21
+    100024: Crane_Element_22
+    100026: Crane_Element_23
+    100028: Crane_Element_24
+    100030: Crane_Element_27
+    100032: Crane_Element_28
+    100034: Crane_Element_29
+    100036: Crane_Element_3
+    100038: Crane_Element_30
+    100040: Crane_Element_31
+    100042: Crane_Element_4
+    100044: Crane_Element_5
+    100046: Crane_Element_6
+    100048: Crane_Element_7
+    100050: Crane_Element_8
+    100052: Crane_Element_9
+    100054: //RootNode
+    400000: Crane_Element_1
+    400002: Crane_Element_10
+    400004: Crane_Element_11
+    400006: Crane_Element_12
+    400008: Crane_Element_13
+    400010: Crane_Element_14
+    400012: Crane_Element_16
+    400014: Crane_Element_17
+    400016: Crane_Element_18
+    400018: Crane_Element_19
+    400020: Crane_Element_20
+    400022: Crane_Element_21
+    400024: Crane_Element_22
+    400026: Crane_Element_23
+    400028: Crane_Element_24
+    400030: Crane_Element_27
+    400032: Crane_Element_28
+    400034: Crane_Element_29
+    400036: Crane_Element_3
+    400038: Crane_Element_30
+    400040: Crane_Element_31
+    400042: Crane_Element_4
+    400044: Crane_Element_5
+    400046: Crane_Element_6
+    400048: Crane_Element_7
+    400050: Crane_Element_8
+    400052: Crane_Element_9
+    400054: //RootNode
+    2100000: lambert41
+    2300000: Crane_Element_1
+    2300002: Crane_Element_10
+    2300004: Crane_Element_11
+    2300006: Crane_Element_12
+    2300008: Crane_Element_13
+    2300010: Crane_Element_14
+    2300012: Crane_Element_16
+    2300014: Crane_Element_17
+    2300016: Crane_Element_18
+    2300018: Crane_Element_19
+    2300020: Crane_Element_20
+    2300022: Crane_Element_21
+    2300024: Crane_Element_22
+    2300026: Crane_Element_23
+    2300028: Crane_Element_24
+    2300030: Crane_Element_27
+    2300032: Crane_Element_28
+    2300034: Crane_Element_29
+    2300036: Crane_Element_3
+    2300038: Crane_Element_30
+    2300040: Crane_Element_31
+    2300042: Crane_Element_4
+    2300044: Crane_Element_5
+    2300046: Crane_Element_6
+    2300048: Crane_Element_7
+    2300050: Crane_Element_8
+    2300052: Crane_Element_9
+    3300000: Crane_Element_1
+    3300002: Crane_Element_10
+    3300004: Crane_Element_11
+    3300006: Crane_Element_12
+    3300008: Crane_Element_13
+    3300010: Crane_Element_14
+    3300012: Crane_Element_16
+    3300014: Crane_Element_17
+    3300016: Crane_Element_18
+    3300018: Crane_Element_19
+    3300020: Crane_Element_20
+    3300022: Crane_Element_21
+    3300024: Crane_Element_22
+    3300026: Crane_Element_23
+    3300028: Crane_Element_24
+    3300030: Crane_Element_27
+    3300032: Crane_Element_28
+    3300034: Crane_Element_29
+    3300036: Crane_Element_3
+    3300038: Crane_Element_30
+    3300040: Crane_Element_31
+    3300042: Crane_Element_4
+    3300044: Crane_Element_5
+    3300046: Crane_Element_6
+    3300048: Crane_Element_7
+    3300050: Crane_Element_8
+    3300052: Crane_Element_9
+    4300000: Crane_Element_1
+    4300002: Crane_Element_3
+    4300004: Crane_Element_4
+    4300006: Crane_Element_5
+    4300008: Crane_Element_6
+    4300010: Crane_Element_8
+    4300012: Crane_Element_7
+    4300014: Crane_Element_9
+    4300016: Crane_Element_10
+    4300018: Crane_Element_11
+    4300020: Crane_Element_12
+    4300022: Crane_Element_13
+    4300024: Crane_Element_14
+    4300026: Crane_Element_16
+    4300028: Crane_Element_17
+    4300030: Crane_Element_18
+    4300032: Crane_Element_20
+    4300034: Crane_Element_19
+    4300036: Crane_Element_21
+    4300038: Crane_Element_22
+    4300040: Crane_Element_23
+    4300042: Crane_Element_24
+    4300044: Crane_Element_27
+    4300046: Crane_Element_28
+    4300048: Crane_Element_29
+    4300050: Crane_Element_31
+    4300052: Crane_Element_30
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

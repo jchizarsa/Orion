@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: 25ab1bf59c742a942881980e74759add
+timeCreated: 1516792929
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: R_Cargo
+    100002: //RootNode
+    100004: R_Crane
+    100006: R_Door
+    100008: R_Env
+    100010: R_Env_Combine
+    100012: R_Flag_1
+    100014: R_Flag_2
+    100016: Barrel
+    100018: Barrel 1
+    100020: Barrel_1
+    100022: Barrel_2
+    100024: Barrel_3
+    100026: Barrel_4
+    100028: Barrel_5
+    100030: Box
+    100032: Box1
+    100034: Box2
+    100036: Iron_Garting
+    100038: R_Env_Torch
+    100040: W_Box
+    100042: W_Box_1
+    100044: W_Box_2
+    100046: W_Box_3
+    100048: W_Box_4
+    100050: W_Box_5
+    100052: W_Box_6
+    100054: W_Box_7
+    100056: W_Box_8
+    100058: W_Box_9
+    100060: R_Env_Barrels
+    100062: R_Env_Box
+    100064: W_Box_17
+    100066: W_Box_18
+    100068: W_Box_19
+    400000: R_Cargo
+    400002: //RootNode
+    400004: R_Crane
+    400006: R_Door
+    400008: R_Env
+    400010: R_Env_Combine
+    400012: R_Flag_1
+    400014: R_Flag_2
+    400016: Barrel
+    400018: Barrel 1
+    400020: Barrel_1
+    400022: Barrel_2
+    400024: Barrel_3
+    400026: Barrel_4
+    400028: Barrel_5
+    400030: Box
+    400032: Box1
+    400034: Box2
+    400036: Iron_Garting
+    400038: R_Env_Torch
+    400040: W_Box
+    400042: W_Box_1
+    400044: W_Box_2
+    400046: W_Box_3
+    400048: W_Box_4
+    400050: W_Box_5
+    400052: W_Box_6
+    400054: W_Box_7
+    400056: W_Box_8
+    400058: W_Box_9
+    400060: R_Env_Barrels
+    400062: R_Env_Box
+    400064: W_Box_17
+    400066: W_Box_18
+    400068: W_Box_19
+    2100000: R_Env_Combine_mtl
+    2100002: Barrel_Box_mtl
+    2300000: R_Cargo
+    2300002: R_Crane
+    2300004: R_Door
+    2300006: R_Env_Combine
+    2300008: R_Flag_1
+    2300010: R_Flag_2
+    2300012: Barrel 1
+    2300014: Barrel_1
+    2300016: Barrel_2
+    2300018: Barrel_3
+    2300020: Barrel_4
+    2300022: Barrel_5
+    2300024: Box
+    2300026: Box1
+    2300028: Box2
+    2300030: Iron_Garting
+    2300032: R_Env_Torch
+    2300034: W_Box_1
+    2300036: W_Box_2
+    2300038: W_Box_3
+    2300040: W_Box_4
+    2300042: W_Box_5
+    2300044: W_Box_6
+    2300046: W_Box_7
+    2300048: W_Box_8
+    2300050: W_Box_9
+    2300052: Barrel
+    2300054: W_Box_17
+    2300056: W_Box_18
+    2300058: W_Box_19
+    3300000: R_Cargo
+    3300002: R_Crane
+    3300004: R_Door
+    3300006: R_Env_Combine
+    3300008: R_Flag_1
+    3300010: R_Flag_2
+    3300012: Barrel 1
+    3300014: Barrel_1
+    3300016: Barrel_2
+    3300018: Barrel_3
+    3300020: Barrel_4
+    3300022: Barrel_5
+    3300024: Box
+    3300026: Box1
+    3300028: Box2
+    3300030: Iron_Garting
+    3300032: R_Env_Torch
+    3300034: W_Box_1
+    3300036: W_Box_2
+    3300038: W_Box_3
+    3300040: W_Box_4
+    3300042: W_Box_5
+    3300044: W_Box_6
+    3300046: W_Box_7
+    3300048: W_Box_8
+    3300050: W_Box_9
+    3300052: Barrel
+    3300054: W_Box_17
+    3300056: W_Box_18
+    3300058: W_Box_19
+    4300000: R_Env_Combine
+    4300002: R_Crane
+    4300004: R_Cargo
+    4300006: R_Flag_2
+    4300008: R_Flag_1
+    4300010: R_Door
+    4300012: Barrel_1
+    4300014: Barrel_2
+    4300016: Barrel_3
+    4300018: Barrel_4
+    4300020: Barrel_5
+    4300022: W_Box_1
+    4300024: W_Box_2
+    4300026: W_Box_3
+    4300028: W_Box_4
+    4300030: W_Box_5
+    4300032: W_Box_6
+    4300034: W_Box_7
+    4300036: W_Box_9
+    4300038: W_Box_8
+    4300040: R_Env_Torch
+    4300042: Barrel
+    4300044: Box
+    4300046: Box1
+    4300048: Box2
+    4300050: Iron_Garting
+    4300052: W_Box_17
+    4300054: W_Box_18
+    4300056: W_Box_19
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

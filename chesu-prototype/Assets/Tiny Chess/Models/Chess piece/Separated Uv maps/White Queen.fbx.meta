@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 74f8f8cdb53099f49b7ea69450aa31e7
+timeCreated: 1514755462
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Geo
+    100002: Queen
+    100004: //RootNode
+    100006: Queen_Body
+    100008: Queen_C_DownBody_Joint
+    100010: Queen_C_Head_Joint
+    100012: Queen_C_Mantle_joint
+    100014: Queen_C_Root_Joint
+    100016: Queen_C_UpBody_Joint
+    100018: Queen_Crown
+    100020: Queen_Global_Ctrl
+    100022: Queen_Helmet_Joint
+    100024: Queen_L_Eye_Joint
+    100026: Queen_L_Hand_Joint
+    100028: Queen_L_Hand_Shield_Joint
+    100030: Queen_Leg
+    100032: Queen_Needle
+    100034: Queen_R_Eye_Joint
+    100036: Queen_R_Hand_Joint
+    100038: Queen_R_Hand_Weapons_Joint
+    100040: Queen_C_Leg_Joint
+    100042: White_Queen
+    100044: White_Queen_Body
+    100046: White_Queen_Crown
+    100048: White_Queen_Leg
+    100050: White_Queen_Needle
+    400000: Geo
+    400002: Queen
+    400004: //RootNode
+    400006: Queen_Body
+    400008: Queen_C_DownBody_Joint
+    400010: Queen_C_Head_Joint
+    400012: Queen_C_Mantle_joint
+    400014: Queen_C_Root_Joint
+    400016: Queen_C_UpBody_Joint
+    400018: Queen_Crown
+    400020: Queen_Global_Ctrl
+    400022: Queen_Helmet_Joint
+    400024: Queen_L_Eye_Joint
+    400026: Queen_L_Hand_Joint
+    400028: Queen_L_Hand_Shield_Joint
+    400030: Queen_Leg
+    400032: Queen_Needle
+    400034: Queen_R_Eye_Joint
+    400036: Queen_R_Hand_Joint
+    400038: Queen_R_Hand_Weapons_Joint
+    400040: Queen_C_Leg_Joint
+    400042: White_Queen
+    400044: White_Queen_Body
+    400046: White_Queen_Crown
+    400048: White_Queen_Leg
+    400050: White_Queen_Needle
+    2100000: Queen_mat
+    4300000: Queen_Needle
+    4300002: Queen_Crown
+    4300004: Queen_Leg
+    4300006: Queen_Body
+    4300008: White_Queen_Needle
+    4300010: White_Queen_Crown
+    4300012: White_Queen_Leg
+    4300014: White_Queen_Body
+    9500000: //RootNode
+    13700000: Queen_Body
+    13700002: Queen_Crown
+    13700004: Queen_Leg
+    13700006: Queen_Needle
+    13700008: White_Queen_Body
+    13700010: White_Queen_Crown
+    13700012: White_Queen_Leg
+    13700014: White_Queen_Needle
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

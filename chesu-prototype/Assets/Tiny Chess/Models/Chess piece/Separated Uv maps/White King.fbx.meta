@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: aeb62e0b463a5354f800c8ddeee6a1fe
+timeCreated: 1514760381
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Geo
+    100002: King
+    100004: //RootNode
+    100006: King_Body
+    100008: King_C_DownBody_Joint
+    100010: King_C_Head_Joint
+    100012: King_C_Mantle_joint
+    100014: King_C_Root_Joint
+    100016: King_C_UpBody_Joint
+    100018: King_Crown
+    100020: King_Global_Ctrl
+    100022: King_Helmet_Joint
+    100024: King_L_Eye_Joint
+    100026: King_L_Hand_Joint
+    100028: King_L_Hand_Shield_Joint
+    100030: King_Leg
+    100032: King_R_Eye_Joint
+    100034: King_R_Hand_Joint
+    100036: King_R_Hand_Weapons_Joint
+    100038: King_Sword
+    100040: King_C_Leg_Joint
+    100042: White_King
+    100044: White_King_Body
+    100046: White_King_Crown
+    100048: White_King_Leg
+    100050: White_King_Sword
+    400000: Geo
+    400002: King
+    400004: //RootNode
+    400006: King_Body
+    400008: King_C_DownBody_Joint
+    400010: King_C_Head_Joint
+    400012: King_C_Mantle_joint
+    400014: King_C_Root_Joint
+    400016: King_C_UpBody_Joint
+    400018: King_Crown
+    400020: King_Global_Ctrl
+    400022: King_Helmet_Joint
+    400024: King_L_Eye_Joint
+    400026: King_L_Hand_Joint
+    400028: King_L_Hand_Shield_Joint
+    400030: King_Leg
+    400032: King_R_Eye_Joint
+    400034: King_R_Hand_Joint
+    400036: King_R_Hand_Weapons_Joint
+    400038: King_Sword
+    400040: King_C_Leg_Joint
+    400042: White_King
+    400044: White_King_Body
+    400046: White_King_Crown
+    400048: White_King_Leg
+    400050: White_King_Sword
+    2100000: King_mat
+    4300000: King_Crown
+    4300002: King_Sword
+    4300004: King_Leg
+    4300006: King_Body
+    4300008: White_King_Crown
+    4300010: White_King_Sword
+    4300012: White_King_Leg
+    4300014: White_King_Body
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: King_Body
+    13700002: King_Crown
+    13700004: King_Leg
+    13700006: King_Sword
+    13700008: White_King_Body
+    13700010: White_King_Crown
+    13700012: White_King_Leg
+    13700014: White_King_Sword
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

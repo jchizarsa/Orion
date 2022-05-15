@@ -1,0 +1,10 @@
+Tiny chess 
+
+Update 1.1:
+
+1) 6 ordinary chess pieces and textures to them (white, black).
+   Chess pieces are stylized as a stone and consist of several elements.
+
+2) icons for figures
+
+3) squeezed textures

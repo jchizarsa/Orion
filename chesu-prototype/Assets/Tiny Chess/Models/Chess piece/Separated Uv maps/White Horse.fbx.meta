@@ -1,0 +1,220 @@
+fileFormatVersion: 2
+guid: 1479a33d7837fc845a29affb73a8f474
+timeCreated: 1514713873
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Geo
+    100002: Horse
+    100004: //RootNode
+    100006: Horse_Boby
+    100008: Horse_C_DownBody_Joint
+    100010: Horse_C_Head_1_Joint
+    100012: Horse_C_Head_Joint
+    100014: Horse_C_Nose_2_Joint
+    100016: Horse_C_Root_Joint
+    100018: Horse_C_Root_Joint 1
+    100020: Horse_C_Spine_1_Joint
+    100022: Horse_C_Spine_1_Joint 1
+    100024: Horse_C_UpBody_Joint
+    100026: Horse_Global_Ctrl
+    100028: Horse_Helmet_Joint
+    100030: Horse_L_Ear_Joint
+    100032: Horse_L_Eye_Joint
+    100034: Horse_L_Hand_Joint
+    100036: Horse_L_Hand_Shield_Joint
+    100038: Horse_R_Ear_Joint
+    100040: Horse_R_Eye_Joint
+    100042: Horse_R_Hand_Joint
+    100044: Horse_R_Hand_Weapons_Joint
+    100046: Rider_Body
+    100048: Rider_Helmet
+    100050: Rider_Leg
+    100052: Rider_Shield
+    100054: Rider_Spear
+    100056: Horse_Body
+    100058: Horse_Leg_Joint
+    100060: Horse_Rider_C_Root_Joint
+    100062: Horse_Leg
+    100064: Horse_Rider_C_DownBody_Joint
+    100066: Horse_Rider_C_Head_Joint
+    100068: Horse_Rider_C_Root_Joint 1
+    100070: Horse_Rider_C_UpBody_Joint
+    100072: Horse_Rider_Helmet_Joint
+    100074: Horse_Rider_L_Eye_Joint
+    100076: Horse_Rider_L_Hand_Joint
+    100078: Horse_Rider_L_Hand_Shield_Joint
+    100080: Horse_Rider_R_Eye_Joint
+    100082: Horse_Rider_R_Hand_Joint
+    100084: Horse_Rider_R_Hand_Weapons_Joint
+    100086: White_Horse
+    100088: White_Horse_Rider_Body
+    100090: White_Horse_Rider_Helmet
+    100092: White_Horse_Rider_Shield
+    100094: White_Horse_Rider_Spear
+    100096: White_Horse_Body
+    100098: White_Horse_Leg
+    400000: Geo
+    400002: Horse
+    400004: //RootNode
+    400006: Horse_Boby
+    400008: Horse_C_DownBody_Joint
+    400010: Horse_C_Head_1_Joint
+    400012: Horse_C_Head_Joint
+    400014: Horse_C_Nose_2_Joint
+    400016: Horse_C_Root_Joint
+    400018: Horse_C_Root_Joint 1
+    400020: Horse_C_Spine_1_Joint
+    400022: Horse_C_Spine_1_Joint 1
+    400024: Horse_C_UpBody_Joint
+    400026: Horse_Global_Ctrl
+    400028: Horse_Helmet_Joint
+    400030: Horse_L_Ear_Joint
+    400032: Horse_L_Eye_Joint
+    400034: Horse_L_Hand_Joint
+    400036: Horse_L_Hand_Shield_Joint
+    400038: Horse_R_Ear_Joint
+    400040: Horse_R_Eye_Joint
+    400042: Horse_R_Hand_Joint
+    400044: Horse_R_Hand_Weapons_Joint
+    400046: Rider_Body
+    400048: Rider_Helmet
+    400050: Rider_Leg
+    400052: Rider_Shield
+    400054: Rider_Spear
+    400056: Horse_Body
+    400058: Horse_Leg_Joint
+    400060: Horse_Rider_C_Root_Joint
+    400062: Horse_Leg
+    400064: Horse_Rider_C_DownBody_Joint
+    400066: Horse_Rider_C_Head_Joint
+    400068: Horse_Rider_C_Root_Joint 1
+    400070: Horse_Rider_C_UpBody_Joint
+    400072: Horse_Rider_Helmet_Joint
+    400074: Horse_Rider_L_Eye_Joint
+    400076: Horse_Rider_L_Hand_Joint
+    400078: Horse_Rider_L_Hand_Shield_Joint
+    400080: Horse_Rider_R_Eye_Joint
+    400082: Horse_Rider_R_Hand_Joint
+    400084: Horse_Rider_R_Hand_Weapons_Joint
+    400086: White_Horse
+    400088: White_Horse_Rider_Body
+    400090: White_Horse_Rider_Helmet
+    400092: White_Horse_Rider_Shield
+    400094: White_Horse_Rider_Spear
+    400096: White_Horse_Body
+    400098: White_Horse_Leg
+    2100000: Horse_mat
+    2100002: Rider_mat
+    2300000: Horse_Body
+    3300000: Horse_Body
+    4300000: Horse_Boby
+    4300002: Rider_Body
+    4300004: Rider_Leg
+    4300006: Rider_Helmet
+    4300008: Rider_Shield
+    4300010: Rider_Spear
+    4300012: Horse_Body
+    4300014: White_Horse_Rider_Body
+    4300016: White_Horse_Rider_Helmet
+    4300018: White_Horse_Rider_Spear
+    4300020: White_Horse_Rider_Shield
+    4300022: Horse_Leg
+    4300024: White_Horse_Leg
+    4300026: White_Horse_Body
+    9500000: //RootNode
+    13700000: Horse_Boby
+    13700002: Rider_Body
+    13700004: Rider_Helmet
+    13700006: Rider_Leg
+    13700008: Rider_Shield
+    13700010: Rider_Spear
+    13700012: Horse_Body
+    13700014: Horse_Leg
+    13700016: White_Horse_Rider_Body
+    13700018: White_Horse_Rider_Helmet
+    13700020: White_Horse_Rider_Shield
+    13700022: White_Horse_Rider_Spear
+    13700024: White_Horse_Body
+    13700026: White_Horse_Leg
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

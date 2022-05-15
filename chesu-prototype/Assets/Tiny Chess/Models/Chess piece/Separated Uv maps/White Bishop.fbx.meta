@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 0a320751327e3c54eaf8db6e6b97a0e1
+timeCreated: 1515312624
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bishop
+    100004: Bishop_Body
+    100006: Bishop_C_DownBody_Joint
+    100008: Bishop_C_Head_Joint
+    100010: Bishop_C_Leg_Joint
+    100012: Bishop_C_Mantle_joint
+    100014: Bishop_C_Root_Joint
+    100016: Bishop_C_UpBody_Joint
+    100018: Bishop_Cap
+    100020: Bishop_Global_Ctrl
+    100022: Bishop_Helmet_Joint
+    100024: Bishop_L_Eye_Joint
+    100026: Bishop_L_Hand_Joint
+    100028: Bishop_Leg
+    100030: Bishop_R_Eye_Joint
+    100032: Bishop_R_Hand_Joint
+    100034: Bishop_R_Hand_Weapons_Joint
+    100036: Bishop_Staff
+    100038: Geo
+    400000: //RootNode
+    400002: Bishop
+    400004: Bishop_Body
+    400006: Bishop_C_DownBody_Joint
+    400008: Bishop_C_Head_Joint
+    400010: Bishop_C_Leg_Joint
+    400012: Bishop_C_Mantle_joint
+    400014: Bishop_C_Root_Joint
+    400016: Bishop_C_UpBody_Joint
+    400018: Bishop_Cap
+    400020: Bishop_Global_Ctrl
+    400022: Bishop_Helmet_Joint
+    400024: Bishop_L_Eye_Joint
+    400026: Bishop_L_Hand_Joint
+    400028: Bishop_Leg
+    400030: Bishop_R_Eye_Joint
+    400032: Bishop_R_Hand_Joint
+    400034: Bishop_R_Hand_Weapons_Joint
+    400036: Bishop_Staff
+    400038: Geo
+    2100000: Bishop_mat
+    4300000: Bishop_Cap
+    4300002: Bishop_Staff
+    4300004: Bishop_Leg
+    4300006: Bishop_Body
+    9500000: //RootNode
+    13700000: Bishop_Body
+    13700002: Bishop_Cap
+    13700004: Bishop_Leg
+    13700006: Bishop_Staff
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
