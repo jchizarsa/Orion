@@ -607,6 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4987613164852332}
   - component: {fileID: 95025090371908968}
+  - component: {fileID: 4191284736326630073}
   m_Layer: 0
   m_Name: Black Pawn
   m_TagString: Untagged
@@ -651,6 +652,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4191284736326630073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635253307245532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28f51c2db4325234282a90e751e58a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
+  currentX: 0
+  currentY: 0
+  type: 0
 --- !u!1 &1657663321598226
 GameObject:
   m_ObjectHideFlags: 0
