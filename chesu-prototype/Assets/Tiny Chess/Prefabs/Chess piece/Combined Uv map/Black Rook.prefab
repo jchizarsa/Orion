@@ -613,6 +613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4405091043149630}
   - component: {fileID: 95801572695680790}
+  - component: {fileID: 6248790350670875378}
   m_Layer: 0
   m_Name: Black Rook
   m_TagString: Untagged
@@ -657,6 +658,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6248790350670875378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699609104537690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae99043d3a4aee445b0c081a9dbd96fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
+  currentX: 0
+  currentY: 0
+  type: 0
 --- !u!1 &1770214964854708
 GameObject:
   m_ObjectHideFlags: 0
