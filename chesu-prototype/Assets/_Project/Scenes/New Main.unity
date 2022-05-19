@@ -142,9 +142,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMaterial: {fileID: 2100000, guid: 9a722bfbba983d1408dcd87dd6021df7, type: 2}
   selectedTileMaterial: {fileID: 2100000, guid: ffdff380d78b59146a27204a34de5743, type: 2}
+  highlightMaterial: {fileID: 2100000, guid: 3507dbe4cfe25b44c89bfa806bf55f09, type: 2}
   tileSize: 2
   yOffset: 1.3
   boardCenter: {x: 0, y: 0, z: 0}
+  deathSize: 0.3
+  deathSpacing: 0.3
+  dragOffset: 1.5
   prefabs:
   - {fileID: 1054443145016762, guid: f7118f496df0737438339acc21f7f224, type: 3}
   - {fileID: 1145061619818354, guid: 3c04176fe31dd2343b01ea7d3fbaf913, type: 3}
