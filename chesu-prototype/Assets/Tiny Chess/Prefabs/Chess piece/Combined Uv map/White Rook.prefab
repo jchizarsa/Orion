@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 4912712716628612}
   - component: {fileID: 95521144783069438}
   - component: {fileID: -3025901834459642646}
+  - component: {fileID: 5984950770121598829}
   m_Layer: 0
   m_Name: White Rook
   m_TagString: Untagged
@@ -102,6 +103,23 @@ MonoBehaviour:
   currentX: 0
   currentY: 0
   type: 0
+--- !u!114 &5984950770121598829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145061619818354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ff81ab05aed6a49b3518375f36011c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  attackHash: 0
+  isDeadHash: 0
+  canAttack: 0
+  isDead: 0
 --- !u!1 &1148431805048664
 GameObject:
   m_ObjectHideFlags: 0

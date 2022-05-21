@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 4749294142355778}
   - component: {fileID: 95703141979623976}
   - component: {fileID: -3448586627862963255}
+  - component: {fileID: 8269814290026529302}
   m_Layer: 0
   m_Name: White King
   m_TagString: Untagged
@@ -192,6 +193,23 @@ MonoBehaviour:
   currentX: 0
   currentY: 0
   type: 0
+--- !u!114 &8269814290026529302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189892643870634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ff81ab05aed6a49b3518375f36011c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  attackHash: 0
+  isDeadHash: 0
+  canAttack: 0
+  isDead: 0
 --- !u!1 &1251747832353306
 GameObject:
   m_ObjectHideFlags: 0

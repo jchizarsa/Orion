@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 4566262444497706}
   - component: {fileID: 95450210194464220}
   - component: {fileID: 5884646158797124139}
+  - component: {fileID: 2374377126956583388}
   m_Layer: 0
   m_Name: White Queen
   m_TagString: Untagged
@@ -264,6 +265,23 @@ MonoBehaviour:
   currentX: 0
   currentY: 0
   type: 0
+--- !u!114 &2374377126956583388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044751971961674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ff81ab05aed6a49b3518375f36011c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  attackHash: 0
+  isDeadHash: 0
+  canAttack: 0
+  isDead: 0
 --- !u!1 &1056184683496190
 GameObject:
   m_ObjectHideFlags: 0
