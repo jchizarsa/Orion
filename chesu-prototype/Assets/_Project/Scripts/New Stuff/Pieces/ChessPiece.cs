@@ -33,7 +33,7 @@ public class ChessPiece : MonoBehaviour
     private void Update(){
         
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * 10); // Smoothly move the piece to its desired position
-        transform.localScale = Vector3.Lerp(transform.localScale, desiredScale, Time.deltaTime * 10); // Smoothly scale the piece to its desired scale
+        transform.localScale = Vector3.Lerp(transform.localScale, desiredScale, Time.deltaTime * 5); // Smoothly scale the piece to its desired scale
     }
     /// <summary>
     /// Function to check for available moves on the board.

@@ -13,6 +13,9 @@ public class Chessboard : MonoBehaviour
     [SerializeField] private float deathSize = 0.3f;
     [SerializeField] private float deathSpacing = 0.3f;
     [SerializeField] private float dragOffset = 1.5f;
+    [SerializeField] private int boardType;
+    [SerializeField] private int TILE_COUNT_X = 25;
+    [SerializeField] private int TILE_COUNT_Y = 23;
 
     [Header("Prefabs & Materials")]
     [SerializeField] private GameObject[] prefabs;
@@ -24,10 +27,9 @@ public class Chessboard : MonoBehaviour
     private ChessPiece[,] chessPieces;
     private ChessPiece currentlyDragging;
     private List<Vector2Int> availableMoves = new List<Vector2Int>();
+    private List<Vector2Int> enemyMoves = new List<Vector2Int>();
     private List<ChessPiece> deadWhites = new List<ChessPiece>();
     private List<ChessPiece> deadBlacks = new List<ChessPiece>();
-    private const int TILE_COUNT_X = 8;
-    private const int TILE_COUNT_Y = 8;
     private GameObject[,] tiles;
     private Camera currentCamera;
     private Vector2Int currentHover;
@@ -35,8 +37,8 @@ public class Chessboard : MonoBehaviour
 
     private void Awake(){
         //Spawn level 1
-        GenerateAllTiles(tileSize, TILE_COUNT_X, TILE_COUNT_Y, 0);
-        SpawnAllPieces();
+        GenerateAllTiles(tileSize, TILE_COUNT_X, TILE_COUNT_Y, boardType);
+        SpawnAllPieces(1);
         PositionalAllPieces();
     }
 
@@ -54,7 +56,7 @@ public class Chessboard : MonoBehaviour
             
             // Get indices of the tiles that are hit
             Vector2Int hitPosition = LookupTileIndex(info.transform.gameObject);
-
+            
             // If you start hovering a tile that is not the current hover, then change the current hover
             if(currentHover == -Vector2Int.one){
                 currentHover = hitPosition;
@@ -70,6 +72,17 @@ public class Chessboard : MonoBehaviour
                 tiles[hitPosition.x, hitPosition.y].GetComponent<MeshRenderer>().material = selectedTileMaterial;
             }
 
+            // If the piece is a black piece, then highlight its available moves. If the player lands on one of those available moves, trigger logic for player defeat.
+            for(int x = 0; x < TILE_COUNT_X; x++){
+                for(int y = 0; y < TILE_COUNT_Y; y++){
+                    if(chessPieces[x,y] != null){
+                        if(chessPieces[x,y].team == 1){
+                            enemyMoves = chessPieces[x,y].GetAvailableMoves(ref chessPieces, TILE_COUNT_X, TILE_COUNT_Y);
+                            HighlightEnemyMoves();
+                        }    
+                    }
+            }
+        }
             
             /// Clicking and dragging functionality
             /// 
@@ -77,7 +90,7 @@ public class Chessboard : MonoBehaviour
             if(Input.GetMouseButtonDown(0)){
                 if(chessPieces[hitPosition.x, hitPosition.y] != null){
                     // Check turn. Is it your turn?
-                    if(true){
+                    if(chessPieces[hitPosition.x, hitPosition.y].team == 0){
                         currentlyDragging = chessPieces[hitPosition.x,hitPosition.y];
 
                         // Get a list of where the piece can move
@@ -95,6 +108,7 @@ public class Chessboard : MonoBehaviour
                 // Check if the move is valid
                 bool validMove = MoveTo(currentlyDragging, hitPosition.x, hitPosition.y);
                 if(!validMove){
+                    // Reset the piece to its previous position
                     currentlyDragging.SetPosition(GetTileCenter(previousPosition.x, previousPosition.y));
                 }
                 currentlyDragging = null;
@@ -156,26 +170,23 @@ public class Chessboard : MonoBehaviour
                 for(int x = 0; x < tileCountX; x++){
                     for(int y = 0; y < tileCountY; y++){
                         tiles[x,y] = GenerateSingleTile(tileSize, x, y);   
-                        if(x < 7 && y < 5){
+                        if(x < 6 && y < 6){
                             tiles[x,y].SetActive(false);
                         }
-                        if(x > 16 && y < 5){
+                        if(x > 17 && y < 5){
                             tiles[x,y].SetActive(false);
                         }
-                        if(x < 7 && y == 5){
+                        if(x < 6 && y > 5 && y < 8){
                             tiles[x,y].SetActive(false);
                         }
-                        if(x < 14 && y > 5 && y < 12){
+                        if(x < 13 && y > 7 && y < 11){
                             tiles[x,y].SetActive(false);
                         }
-                        if(y > 11 && y < 15){
-                            // do nothing here, just let it spawn
-                        }
-                        if(y > 14 && x > 16){
+                        if(y > 15 && x > 17){
                             tiles[x,y].SetActive(false);
                         }
                     }
-        }
+                }
             break;
 
             // Level 2
@@ -243,36 +254,117 @@ public class Chessboard : MonoBehaviour
     /// Ex. chessPieces[x,y] = SpawnSinglePiece(ChessPieceType, team);
     /// Where x and y are the coordinates of the tile.
     /// </summary>
-    private void SpawnAllPieces(){
+    private void SpawnAllPieces(int gridType){
         chessPieces = new ChessPiece[TILE_COUNT_X, TILE_COUNT_Y];
-
+        
         int whiteTeam = 0, blackTeam = 1;
 
-        //White Team
-        chessPieces[0,0] = SpawnSinglePiece(ChessPieceType.White_Rook, whiteTeam);
-        chessPieces[1,0] = SpawnSinglePiece(ChessPieceType.White_Knight, whiteTeam);
-        chessPieces[2,0] = SpawnSinglePiece(ChessPieceType.White_Bishop, whiteTeam);
-        chessPieces[3,0] = SpawnSinglePiece(ChessPieceType.White_Queen, whiteTeam);
-        chessPieces[4,0] = SpawnSinglePiece(ChessPieceType.White_King, whiteTeam);
-        chessPieces[5,0] = SpawnSinglePiece(ChessPieceType.White_Bishop, whiteTeam);
-        chessPieces[6,0] = SpawnSinglePiece(ChessPieceType.White_Knight, whiteTeam);
-        chessPieces[7,0] = SpawnSinglePiece(ChessPieceType.White_Rook, whiteTeam);
-        for(int i = 0; i < TILE_COUNT_X; i++){
-            chessPieces[i,1] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
-        }
+        switch(gridType){
+            // Base Chess Board
+            case 0:
+                //White Team
+                chessPieces[0,0] = SpawnSinglePiece(ChessPieceType.White_Rook, whiteTeam);
+                chessPieces[1,0] = SpawnSinglePiece(ChessPieceType.White_Knight, whiteTeam);
+                chessPieces[2,0] = SpawnSinglePiece(ChessPieceType.White_Bishop, whiteTeam);
+                chessPieces[3,0] = SpawnSinglePiece(ChessPieceType.White_Queen, whiteTeam);
+                chessPieces[4,0] = SpawnSinglePiece(ChessPieceType.White_King, whiteTeam);
+                chessPieces[5,0] = SpawnSinglePiece(ChessPieceType.White_Bishop, whiteTeam);
+                chessPieces[6,0] = SpawnSinglePiece(ChessPieceType.White_Knight, whiteTeam);
+                chessPieces[7,0] = SpawnSinglePiece(ChessPieceType.White_Rook, whiteTeam);
+                for(int i = 0; i < TILE_COUNT_X; i++){
+                    chessPieces[i,1] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                }
 
-        //Black Team
-        chessPieces[0,7] = SpawnSinglePiece(ChessPieceType.Black_Rook, blackTeam);
-        chessPieces[1,7] = SpawnSinglePiece(ChessPieceType.Black_Knight, blackTeam);
-        chessPieces[2,7] = SpawnSinglePiece(ChessPieceType.Black_Bishop, blackTeam);
-        chessPieces[3,7] = SpawnSinglePiece(ChessPieceType.Black_King, blackTeam);
-        chessPieces[4,7] = SpawnSinglePiece(ChessPieceType.Black_Queen, blackTeam);
-        chessPieces[5,7] = SpawnSinglePiece(ChessPieceType.Black_Bishop, blackTeam);
-        chessPieces[6,7] = SpawnSinglePiece(ChessPieceType.Black_Knight, blackTeam);
-        chessPieces[7,7] = SpawnSinglePiece(ChessPieceType.Black_Rook, blackTeam);
-        for(int i = 0; i < TILE_COUNT_X; i++){
-            chessPieces[i,6] = SpawnSinglePiece(ChessPieceType.Black_Pawn, blackTeam);
+                //Black Team
+                chessPieces[0,7] = SpawnSinglePiece(ChessPieceType.Black_Rook, blackTeam);
+                chessPieces[1,7] = SpawnSinglePiece(ChessPieceType.Black_Knight, blackTeam);
+                chessPieces[2,7] = SpawnSinglePiece(ChessPieceType.Black_Bishop, blackTeam);
+                chessPieces[3,7] = SpawnSinglePiece(ChessPieceType.Black_King, blackTeam);
+                chessPieces[4,7] = SpawnSinglePiece(ChessPieceType.Black_Queen, blackTeam);
+                chessPieces[5,7] = SpawnSinglePiece(ChessPieceType.Black_Bishop, blackTeam);
+                chessPieces[6,7] = SpawnSinglePiece(ChessPieceType.Black_Knight, blackTeam);
+                chessPieces[7,7] = SpawnSinglePiece(ChessPieceType.Black_Rook, blackTeam);
+                for(int i = 0; i < TILE_COUNT_X; i++){
+                    chessPieces[i,6] = SpawnSinglePiece(ChessPieceType.Black_Pawn, blackTeam);
+                }
+            break;
+
+            // Level 1
+            case 1:
+                chessPieces[9,3] = SpawnSinglePiece(ChessPieceType.White_Knight, whiteTeam);
+                chessPieces[4,20] = SpawnSinglePiece(ChessPieceType.Black_King, blackTeam);
+                chessPieces[9,15] = SpawnSinglePiece(ChessPieceType.Black_Rook, blackTeam);
+                chessPieces[19, 10] = SpawnSinglePiece(ChessPieceType.Black_Rook, blackTeam);
+
+                for(int x = 0; x < TILE_COUNT_X; x++){
+                    for(int y = 0; y < TILE_COUNT_Y; y++){
+                        if(y > 10 && x == 0){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }  
+                        if(y == 11 && x > 0 && x < 14){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(y == 23 && x > 0 && x < 17){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(x == 17 && y > 14){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(y == 15 && x > 17){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        } 
+                        if(x == 24 && y > 5 && y < 15){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(y == 5 && x > 17){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(x == 17 && y < 6){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(y == 0 && x < 17 && x > 5){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(y > 0 && y < 8 && x == 6){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(y == 7 && x > 6 && x < 14){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                        if(y > 7 && y < 11 && x == 13){
+                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                        }
+                       
+                    }
+                }
+            break;
+
+            // Level 2
+            case 2:
+
+            break;
+
+            // Level 3
+            case 3:
+
+            break;
+
+            // Level 4
+            case 4:
+
+            break;
+
+            // Level 5
+            case 5:
+
+            break;
+
+            // Level 6
+            case 6:
+
+            break;
         }
+        
 
     }
 
@@ -362,22 +454,28 @@ public class Chessboard : MonoBehaviour
                 return false;
             }
 
-            // Remove the other piece if it is an enemy
+            // Remove the other piece if it is an enemy, capture it.
             if(otherPiece.team == 0){
                 deadWhites.Add(otherPiece);
                 otherPiece.SetScale(Vector3.one*deathSize);
-                otherPiece.SetPosition(new Vector3(8 * tileSize, yOffset, -1 * tileSize) 
-                                        - bounds 
-                                        + new Vector3(tileSize / 2, 0, tileSize / 2)
-                                        + (Vector3.forward * deathSpacing) * deadWhites.Count);
+                
+                // Original code sets position to the side of the board.
+                // otherPiece.SetPosition(new Vector3(8 * tileSize, yOffset, -1 * tileSize) 
+                //                         - bounds 
+                //                         + new Vector3(tileSize / 2, 0, tileSize / 2)
+                //                         + (Vector3.forward * deathSpacing) * deadWhites.Count);
             }
             else{
+                RemoveEnemyMoves();
                 deadBlacks.Add(otherPiece);
                 otherPiece.SetScale(Vector3.one*deathSize);
-                otherPiece.SetPosition(new Vector3(-1 * tileSize, yOffset, 8 * tileSize) 
-                                        - bounds 
-                                        + new Vector3(tileSize / 2, 0, tileSize / 2)
-                                        + (Vector3.back * deathSpacing) * deadBlacks.Count);
+                //otherPiece.SetPosition(new Vector3(otherPiece.transform.position.x, -1f, otherPiece.transform.position.z)); 
+
+                // Original code sets position to the side of the board.
+                // otherPiece.SetPosition(new Vector3(-1 * tileSize, yOffset, 8 * tileSize) 
+                //                         - bounds 
+                //                         + new Vector3(tileSize / 2, 0, tileSize / 2)
+                //                         + (Vector3.back * deathSpacing) * deadBlacks.Count);
             }
         }
 
@@ -388,7 +486,6 @@ public class Chessboard : MonoBehaviour
         chessPieces[previousPosition.x, previousPosition.y] = null;
 
         PositionSinglePiece(x, y);
-
         return true;
     }
     /// <summary>
@@ -426,6 +523,20 @@ public class Chessboard : MonoBehaviour
         }
 
         availableMoves.Clear();
+    }
+    private void HighlightEnemyMoves(){
+        for(int i = 0; i < enemyMoves.Count; i++){
+            tiles[enemyMoves[i].x, enemyMoves[i].y].layer = LayerMask.NameToLayer("Highlight");
+            tiles[enemyMoves[i].x, enemyMoves[i].y].GetComponent<MeshRenderer>().material = highlightMaterial;
+        }
+    }
+    private void RemoveEnemyMoves(){
+        for(int i = 0; i < enemyMoves.Count; i++){
+            tiles[enemyMoves[i].x, enemyMoves[i].y].layer = LayerMask.NameToLayer("Tile");
+            tiles[enemyMoves[i].x, enemyMoves[i].y].GetComponent<MeshRenderer>().material = tileMaterial;
+        }
+
+        enemyMoves.Clear();
     }
     #endregion
 }
