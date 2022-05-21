@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+
 public enum ChessPieceType{
     None = 0,
     White_Pawn = 1,
