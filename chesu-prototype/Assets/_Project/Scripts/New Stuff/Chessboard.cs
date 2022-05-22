@@ -1,8 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Chessboard : MonoBehaviour
 {
+    public static Chessboard Instance;
+
     [Header("Art Stuff")]
     [SerializeField] private Material tileMaterial;
     [SerializeField] private Material selectedTileMaterial;
@@ -27,15 +30,17 @@ public class Chessboard : MonoBehaviour
     private ChessPiece[,] chessPieces;
     private ChessPiece currentlyDragging;
     private List<Vector2Int> availableMoves = new List<Vector2Int>();
-    private List<Vector2Int> enemyMoves = new List<Vector2Int>();
-    private List<ChessPiece> deadWhites = new List<ChessPiece>();
+    // private List<Vector2Int> enemyMoves = new List<Vector2Int>();
+    // private List<ChessPiece> deadWhites = new List<ChessPiece>();
     private List<ChessPiece> deadBlacks = new List<ChessPiece>();
     private GameObject[,] tiles;
     private Camera currentCamera;
     private Vector2Int currentHover;
     private Vector3 bounds;
+    public bool blackKingDead;
 
     private void Awake(){
+        Instance = this;
         //Spawn level 1
         GenerateAllTiles(tileSize, TILE_COUNT_X, TILE_COUNT_Y, boardType);
         SpawnAllPieces(1);
@@ -77,8 +82,8 @@ public class Chessboard : MonoBehaviour
                 for(int y = 0; y < TILE_COUNT_Y; y++){
                     if(chessPieces[x,y] != null){
                         if(chessPieces[x,y].team == 1){
-                            enemyMoves = chessPieces[x,y].GetAvailableMoves(ref chessPieces, TILE_COUNT_X, TILE_COUNT_Y);
-                            HighlightEnemyMoves();
+                            //enemyMoves = chessPieces[x,y].GetAvailableMoves(ref chessPieces, TILE_COUNT_X, TILE_COUNT_Y);
+                            //HighlightEnemyMoves();
                         }    
                     }
             }
@@ -95,6 +100,8 @@ public class Chessboard : MonoBehaviour
 
                         // Get a list of where the piece can move
                         availableMoves = currentlyDragging.GetAvailableMoves(ref chessPieces, TILE_COUNT_X, TILE_COUNT_Y);
+
+                        PreventCheck();
                         HighlightTiles(); // Highlight the tiles that the piece can move to
                     }
                 }
@@ -140,7 +147,6 @@ public class Chessboard : MonoBehaviour
             }
         }
     }
-
 
     #region Generate Board Functions
     /// <summary>
@@ -299,40 +305,52 @@ public class Chessboard : MonoBehaviour
                 for(int x = 0; x < TILE_COUNT_X; x++){
                     for(int y = 0; y < TILE_COUNT_Y; y++){
                         if(y > 10 && x == 0){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }  
                         if(y == 11 && x > 0 && x < 14){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
                         }
                         if(y == 23 && x > 0 && x < 17){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                         if(x == 17 && y > 14){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                         if(y == 15 && x > 17){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         } 
                         if(x == 24 && y > 5 && y < 15){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                         if(y == 5 && x > 17){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                         if(x == 17 && y < 6){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                         if(y == 0 && x < 17 && x > 5){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                         if(y > 0 && y < 8 && x == 6){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                         if(y == 7 && x > 6 && x < 14){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                         if(y > 7 && y < 11 && x == 13){
-                            chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            //chessPieces[x,y] = SpawnSinglePiece(ChessPieceType.White_Pawn, whiteTeam);
+                            tiles[x,y].SetActive(false);
                         }
                        
                     }
@@ -456,8 +474,8 @@ public class Chessboard : MonoBehaviour
 
             // Remove the other piece if it is an enemy, capture it.
             if(otherPiece.team == 0){
-                deadWhites.Add(otherPiece);
-                otherPiece.SetScale(Vector3.one*deathSize);
+                // deadWhites.Add(otherPiece);
+                // otherPiece.SetScale(Vector3.one*deathSize);
                 
                 // Original code sets position to the side of the board.
                 // otherPiece.SetPosition(new Vector3(8 * tileSize, yOffset, -1 * tileSize) 
@@ -466,7 +484,7 @@ public class Chessboard : MonoBehaviour
                 //                         + (Vector3.forward * deathSpacing) * deadWhites.Count);
             }
             else{
-                RemoveEnemyMoves();
+                // RemoveEnemyMoves();
                 deadBlacks.Add(otherPiece);
                 otherPiece.SetScale(Vector3.one*deathSize);
                 //otherPiece.SetPosition(new Vector3(otherPiece.transform.position.x, -1f, otherPiece.transform.position.z)); 
@@ -476,6 +494,9 @@ public class Chessboard : MonoBehaviour
                 //                         - bounds 
                 //                         + new Vector3(tileSize / 2, 0, tileSize / 2)
                 //                         + (Vector3.back * deathSpacing) * deadBlacks.Count);
+                if(otherPiece.type == ChessPieceType.Black_King){
+                    blackKingDead = true;
+                }
             }
         }
 
@@ -524,19 +545,110 @@ public class Chessboard : MonoBehaviour
 
         availableMoves.Clear();
     }
-    private void HighlightEnemyMoves(){
-        for(int i = 0; i < enemyMoves.Count; i++){
-            tiles[enemyMoves[i].x, enemyMoves[i].y].layer = LayerMask.NameToLayer("Highlight");
-            tiles[enemyMoves[i].x, enemyMoves[i].y].GetComponent<MeshRenderer>().material = highlightMaterial;
-        }
-    }
-    private void RemoveEnemyMoves(){
-        for(int i = 0; i < enemyMoves.Count; i++){
-            tiles[enemyMoves[i].x, enemyMoves[i].y].layer = LayerMask.NameToLayer("Tile");
-            tiles[enemyMoves[i].x, enemyMoves[i].y].GetComponent<MeshRenderer>().material = tileMaterial;
+    // private void HighlightEnemyMoves(){
+    //     for(int i = 0; i < enemyMoves.Count; i++){
+    //         tiles[enemyMoves[i].x, enemyMoves[i].y].layer = LayerMask.NameToLayer("Highlight");
+    //         tiles[enemyMoves[i].x, enemyMoves[i].y].GetComponent<MeshRenderer>().material = highlightMaterial;
+    //     }
+    // }
+    // private void RemoveEnemyMoves(){
+    //     for(int i = 0; i < enemyMoves.Count; i++){
+    //         tiles[enemyMoves[i].x, enemyMoves[i].y].layer = LayerMask.NameToLayer("Tile");
+    //         tiles[enemyMoves[i].x, enemyMoves[i].y].GetComponent<MeshRenderer>().material = tileMaterial;
+    //     }
+
+    //     enemyMoves.Clear();
+    // }
+    #endregion
+    #region Special Moves
+    private void PreventCheck()
+    {
+        ChessPiece player = null;
+        for(int x = 0; x < TILE_COUNT_X; x++){
+            for(int y = 0; y < TILE_COUNT_Y; y++){
+                if(chessPieces[x,y] != null)
+                    if(chessPieces[x,y].type == ChessPieceType.White_Knight)
+                        if(chessPieces[x,y].team == currentlyDragging.team)
+                            player = chessPieces[x,y];
+            }
         }
 
-        enemyMoves.Clear();
+        // Remove moves that put the player in check.
+        SimulateMoveForSinglePiece(currentlyDragging, ref availableMoves, player);
     }
-    #endregion
+    private void SimulateMoveForSinglePiece(ChessPiece cp, ref List<Vector2Int> moves, ChessPiece player){
+        // Save the current values - resets after function call
+        int actualX = cp.currentX;
+        int actualY = cp.currentY;
+
+        List<Vector2Int> movesToRemove = new List<Vector2Int>();
+
+        // Simulate all moves to check for check.
+        for(int i = 0; i < moves.Count; i++){
+            int simX = moves[i].x;
+            int simY = moves[i].y;
+
+            Vector2Int playerPositionThisSim = new Vector2Int(player.currentX, player.currentY);
+            // Player move simulated?
+            if(cp.type == ChessPieceType.White_Knight){
+                playerPositionThisSim = new Vector2Int(simX, simY);
+            }
+
+            // Copy the [,], do not reference it.
+             ChessPiece[,] simulation =  new ChessPiece[TILE_COUNT_X, TILE_COUNT_Y];
+             List<ChessPiece> simAttackingPieces = new List<ChessPiece>();
+             for(int j = 0; j < TILE_COUNT_X; j++){
+                for(int k = 0; k < TILE_COUNT_Y; k++){
+                    if(chessPieces[j,k] != null){
+                        simulation[j,k] = chessPieces[j,k];
+                        if(simulation[j,k].team != cp.team){
+                            simAttackingPieces.Add(simulation[j,k]);
+                        }
+                    }
+                }
+             }
+                
+                    
+            
+            
+        
+
+            // Simulate the move.
+            simulation[actualX, actualY] = null;
+            cp.currentX = simX;
+            cp.currentY = simY;
+            simulation[simX, simY] = cp;
+
+            // Was the move a capture during the sim?
+            var deadPiece = simAttackingPieces.Find(c => c.currentX == simX && c.currentY == simY);
+            if(deadPiece != null){
+                simAttackingPieces.Remove(deadPiece);
+            }
+
+            // Get all moves from attacking pieces, simulation.
+            List<Vector2Int> simMoves = new List<Vector2Int>(); // Something here causes it to run out of memory
+            for(int a = 0; a < simAttackingPieces.Count; a++){
+                var pieceMoves = simAttackingPieces[a].GetAvailableMoves(ref simulation, TILE_COUNT_X, TILE_COUNT_Y);
+                for(int b = 0; b < pieceMoves.Count; b++){
+                    simMoves.Add(pieceMoves[b]);
+                }
+            }
+
+            // Is the player checked? If so, remove the move.
+            if(ContainsValidMove(ref simMoves, playerPositionThisSim)){
+                movesToRemove.Add(moves[i]);
+            }
+
+            // Restore the CP data
+            cp.currentX = actualX;
+            cp.currentY = actualY;
+        }
+
+        // Remove from current available move list.
+        for(int i = 0; i < movesToRemove.Count; i++){
+            moves.Remove(movesToRemove[i]);
+        }
+
+    }
+    #endregion    
 }
